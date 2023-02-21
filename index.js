@@ -1,8 +1,6 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const path = require("path");
-const fs = require("fs");
 const inquirer = require("inquirer");
 const { makeAllDivs, makeHTML } = require("./src/cards");
 var newEmployee = []
@@ -68,7 +66,6 @@ const questions = () => {
     }
 ])
 .then((data) => {
-    console.log(data);
     newEmployee.name = data.name;
     newEmployee.id = data.id;
     newEmployee.role = data.role;
