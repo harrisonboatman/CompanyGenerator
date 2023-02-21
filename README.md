@@ -20,6 +20,7 @@ Utilizes jest for testing purposes.
 
 ## Usage
 
+[companyGenWalkthrough.webm](https://user-images.githubusercontent.com/120153099/220249545-552d50c5-c836-4e99-8088-cb057810dc7a.webm)
 
 
 ## Credits
