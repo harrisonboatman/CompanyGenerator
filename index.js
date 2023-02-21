@@ -74,6 +74,17 @@ const questions = () => {
     newEmployee.role = data.role;
     newEmployee.email = data.email;
     newEmployee.github = data.github;
+    newEmployee.school = data.school;
+    newEmployee.room = data.room;
+    if(!newEmployee.github) {
+        newEmployee.github = 'N/A';
+    }
+    if(!newEmployee.school) {
+        newEmployee.school = 'N/A';
+    }
+    if(!newEmployee.room) {
+        newEmployee.room = 'N/A'
+    }
     makeAllDivs(newEmployee);
 
     if(data.redo) {
