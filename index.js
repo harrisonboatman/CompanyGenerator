@@ -4,8 +4,11 @@ const Intern = require("./lib/Intern");
 const path = require("path");
 const fs = require("fs");
 const inquirer = require("inquirer");
+const { makeAllDivs, makeHTML } = require("./src/cards");
+var newEmployee = []
 
-const questions = () => 
+
+const questions = () => {
     inquirer.prompt([{
         type: 'input',
         name: 'name',
@@ -63,5 +66,24 @@ const questions = () =>
         default: true
         
     }
-]);
-    
+])
+.then((data) => {
+    console.log(data);
+    newEmployee.name = data.name;
+    newEmployee.id = data.id;
+    newEmployee.role = data.role;
+    newEmployee.email = data.email;
+    newEmployee.github = data.github;
+    makeAllDivs(newEmployee);
+
+    if(data.redo) {
+        questions();
+    }else {
+        console.log("You're all done!")
+        makeHTML();
+    }
+})
+
+};
+
+questions();
