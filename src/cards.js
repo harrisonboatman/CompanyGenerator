@@ -6,7 +6,7 @@ const makeAllDivs = (newEmployee) => {
     const htmlCard = `<div class="card employee-card">
 <div class="card-header bg-secondary text-white">
     <h2 class="card-title">${newEmployee.name}</h2>
-    <h3 class="card-title"><i class="fas  mr-2"></i>${newEmployee.role}</h3>
+    <h3 class="card-title">${newEmployee.role}</h3>
 </div>
 <div class="card-body">
     <ul class="list-group">
